@@ -12,6 +12,7 @@ plugins {
 
 group = "com.example"
 version = "0.0.1"
+val koin_version = "3.5.0"
 
 application {
     mainClass.set("com.example.ApplicationKt")
@@ -30,6 +31,8 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json-jvm")
     implementation("org.jetbrains.exposed:exposed-core:$exposed_version")
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposed_version")
+    implementation ("io.insert-koin:koin-ktor:$koin_version")
+    implementation ("io.insert-koin:koin-logger-slf4j:$koin_version")
     implementation("com.h2database:h2:$h2_version")
     implementation("io.ktor:ktor-server-netty-jvm")
     implementation("ch.qos.logback:logback-classic:$logback_version")
